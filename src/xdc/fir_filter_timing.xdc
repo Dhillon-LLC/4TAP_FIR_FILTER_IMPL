@@ -1,6 +1,6 @@
-create_clock -period 2.00 -name FPGA_CLK_P -waveform {0.00 1.00} [get_ports FPGA_CLK_P]
-create_clock -period 0.50 -name ADC_CLK_P -waveform  {0.00 0.25} [get_ports ADC_CLK_P]
-create_clock -period 0.50 -name DAC_CLK_P -waveform  {0.00 0.35} [get_ports DAC_CLK_P]
+create_clock -period 4.00 -name FPGA_CLK_P -waveform {0.00 2.00} [get_ports FPGA_CLK_P]
+create_clock -period 0.5 -name ADC_CLK_P -waveform  {0.00 0.25} [get_ports ADC_CLK_P]
+create_clock -period 0.5 -name DAC_CLK_P -waveform  {0.00 0.25} [get_ports DAC_CLK_P]
 
 set_property VCCAUX_IO DONTCARE [get_ports ADC_CLK_P]
 set_property VCCAUX_IO DONTCARE [get_ports ADC_CLK_N]
