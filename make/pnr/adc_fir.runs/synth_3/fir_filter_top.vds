@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sat Apr 24 17:06:53 2021
-# Process ID: 8056
+# Start of session at: Sun Apr 25 09:38:15 2021
+# Process ID: 8360
 # Current directory: C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3
 # Command line: vivado.exe -log fir_filter_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir_filter_top.tcl
 # Log file: C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/fir_filter_top.vds
@@ -17,84 +17,84 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t
 INFO: [Device 21-403] Loading part xc7k70tfbg484-3
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10472
+INFO: [Synth 8-7075] Helper process launched with PID 21744
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1149.242 ; gain = 22.922
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1147.910 ; gain = 21.781
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'fir_filter_top' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'fir_filter_top' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:58]
 	Parameter C_FIRMWARE_REVISION bound to: 32'b00000100001000000000000000000000 
 	Parameter SIM_MODE bound to: FALSE - type: string 
 	Parameter g_Num_Bits bound to: 16 - type: integer 
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:173]
+INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:172]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:173]
+INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:172]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:173]
+INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:172]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:173]
+INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:172]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:173]
+INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:172]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:173]
+INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:172]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:173]
+INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:172]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:173]
+INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:172]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:173]
+INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:172]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:173]
+INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:172]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:173]
+INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:172]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:173]
+INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:172]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:173]
+INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:172]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:173]
+INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:172]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:173]
+INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:172]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:173]
+INFO: [Synth 8-113] binding component instance 'DIFF_OBUF' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:172]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:181]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:180]
 INFO: [Synth 8-6157] synthesizing module 'IBUFGDS' [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
@@ -107,101 +107,101 @@ INFO: [Synth 8-6155] done synthesizing module 'IBUFGDS' (1#1) [C:/Xilinx/Vivado/
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:181]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:180]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:181]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:180]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:181]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:180]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:181]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:180]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:181]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:180]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:181]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:180]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:181]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:180]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:181]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:180]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:181]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:180]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:181]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:180]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:181]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:180]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:181]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:180]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:181]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:180]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:181]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:180]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:181]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'SNGL_IBUF' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:180]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'dac_valid_ibuf' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:188]
+INFO: [Synth 8-113] binding component instance 'dac_valid_ibuf' to cell 'OBUFDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:187]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 0 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'RST_ibuf' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:194]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'RST_ibuf' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:193]
 INFO: [Synth 8-6157] synthesizing module 'IBUFGDS__parameterized2' [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
@@ -214,41 +214,41 @@ INFO: [Synth 8-6155] done synthesizing module 'IBUFGDS__parameterized2' (1#1) [C
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 0 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'adc_valid_ibuf' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:205]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'adc_valid_ibuf' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:204]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 0 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'adc_ibuf' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:218]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'adc_ibuf' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:217]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 0 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'dac_clk_ibuf' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:230]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'dac_clk_ibuf' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:228]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: 0 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'fpga_clk_ibuf' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:241]
-INFO: [Synth 8-3491] module 'FIR_FIFO1' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8056-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:5' bound to instance 'U_FIR_FIFO1' of component 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:252]
-INFO: [Synth 8-638] synthesizing module 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8056-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:20]
-INFO: [Synth 8-3491] module 'FIR_FIFO1' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8056-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:5' bound to instance 'U_FIR_FIFO1' of component 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:252]
-INFO: [Synth 8-3491] module 'FIR_FIFO1' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8056-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:5' bound to instance 'U_FIR_FIFO1' of component 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:252]
-INFO: [Synth 8-3491] module 'FIR_FIFO1' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8056-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:5' bound to instance 'U_FIR_FIFO1' of component 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:252]
-INFO: [Synth 8-3491] module 'FIR_FIFO1' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8056-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:5' bound to instance 'U_FIR_FIFO1' of component 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:252]
-INFO: [Synth 8-3491] module 'FIR_FIFO1' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8056-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:5' bound to instance 'U_FIR_FIFO1' of component 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:252]
-INFO: [Synth 8-3491] module 'FIR_FIFO1' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8056-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:5' bound to instance 'U_FIR_FIFO1' of component 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:252]
-INFO: [Synth 8-3491] module 'FIR_FIFO1' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8056-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:5' bound to instance 'U_FIR_FIFO1' of component 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:252]
+INFO: [Synth 8-3491] module 'IBUFGDS' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:33462' bound to instance 'fpga_clk_ibuf' of component 'IBUFGDS' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:239]
+INFO: [Synth 8-3491] module 'FIR_FIFO1' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8360-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:5' bound to instance 'U_FIR_FIFO1' of component 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:250]
+INFO: [Synth 8-638] synthesizing module 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8360-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'FIR_FIFO1' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8360-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:5' bound to instance 'U_FIR_FIFO1' of component 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:250]
+INFO: [Synth 8-3491] module 'FIR_FIFO1' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8360-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:5' bound to instance 'U_FIR_FIFO1' of component 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:250]
+INFO: [Synth 8-3491] module 'FIR_FIFO1' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8360-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:5' bound to instance 'U_FIR_FIFO1' of component 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:250]
+INFO: [Synth 8-3491] module 'FIR_FIFO1' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8360-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:5' bound to instance 'U_FIR_FIFO1' of component 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:250]
+INFO: [Synth 8-3491] module 'FIR_FIFO1' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8360-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:5' bound to instance 'U_FIR_FIFO1' of component 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:250]
+INFO: [Synth 8-3491] module 'FIR_FIFO1' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8360-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:5' bound to instance 'U_FIR_FIFO1' of component 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:250]
+INFO: [Synth 8-3491] module 'FIR_FIFO1' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/.Xil/Vivado-8360-Gaming-PC-2021/realtime/FIR_FIFO1_stub.vhdl:5' bound to instance 'U_FIR_FIFO1' of component 'FIR_FIFO1' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:250]
 	Parameter NUM_OF_TAPS bound to: 4 - type: integer 
 	Parameter C_COEFS_LENGTH bound to: 16 - type: integer 
 	Parameter C_MULT_LENGTH bound to: 32 - type: integer 
 	Parameter C_ADD_LENGTH bound to: 33 - type: integer 
 	Parameter C_DATA_IN_LENGTH bound to: 16 - type: integer 
 	Parameter C_DATA_OUT_LENGTH bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'FIR_FILTER' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:5' bound to instance 'U_FIR_FILTER' of component 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:539]
+INFO: [Synth 8-3491] module 'FIR_FILTER' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:5' bound to instance 'U_FIR_FILTER' of component 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:525]
 INFO: [Synth 8-638] synthesizing module 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:28]
 	Parameter NUM_OF_TAPS bound to: 4 - type: integer 
 	Parameter C_COEFS_LENGTH bound to: 16 - type: integer 
@@ -263,98 +263,98 @@ INFO: [Synth 8-256] done synthesizing module 'FIR_FILTER' (2#1) [C:/Users/surin/
 	Parameter C_ADD_LENGTH bound to: 33 - type: integer 
 	Parameter C_DATA_IN_LENGTH bound to: 16 - type: integer 
 	Parameter C_DATA_OUT_LENGTH bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'FIR_FILTER' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:5' bound to instance 'U_FIR_FILTER' of component 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:539]
+INFO: [Synth 8-3491] module 'FIR_FILTER' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:5' bound to instance 'U_FIR_FILTER' of component 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:525]
 	Parameter NUM_OF_TAPS bound to: 4 - type: integer 
 	Parameter C_COEFS_LENGTH bound to: 16 - type: integer 
 	Parameter C_MULT_LENGTH bound to: 32 - type: integer 
 	Parameter C_ADD_LENGTH bound to: 33 - type: integer 
 	Parameter C_DATA_IN_LENGTH bound to: 16 - type: integer 
 	Parameter C_DATA_OUT_LENGTH bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'FIR_FILTER' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:5' bound to instance 'U_FIR_FILTER' of component 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:539]
+INFO: [Synth 8-3491] module 'FIR_FILTER' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:5' bound to instance 'U_FIR_FILTER' of component 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:525]
 	Parameter NUM_OF_TAPS bound to: 4 - type: integer 
 	Parameter C_COEFS_LENGTH bound to: 16 - type: integer 
 	Parameter C_MULT_LENGTH bound to: 32 - type: integer 
 	Parameter C_ADD_LENGTH bound to: 33 - type: integer 
 	Parameter C_DATA_IN_LENGTH bound to: 16 - type: integer 
 	Parameter C_DATA_OUT_LENGTH bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'FIR_FILTER' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:5' bound to instance 'U_FIR_FILTER' of component 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:539]
+INFO: [Synth 8-3491] module 'FIR_FILTER' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:5' bound to instance 'U_FIR_FILTER' of component 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:525]
 	Parameter NUM_OF_TAPS bound to: 4 - type: integer 
 	Parameter C_COEFS_LENGTH bound to: 16 - type: integer 
 	Parameter C_MULT_LENGTH bound to: 32 - type: integer 
 	Parameter C_ADD_LENGTH bound to: 33 - type: integer 
 	Parameter C_DATA_IN_LENGTH bound to: 16 - type: integer 
 	Parameter C_DATA_OUT_LENGTH bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'FIR_FILTER' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:5' bound to instance 'U_FIR_FILTER' of component 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:539]
+INFO: [Synth 8-3491] module 'FIR_FILTER' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:5' bound to instance 'U_FIR_FILTER' of component 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:525]
 	Parameter NUM_OF_TAPS bound to: 4 - type: integer 
 	Parameter C_COEFS_LENGTH bound to: 16 - type: integer 
 	Parameter C_MULT_LENGTH bound to: 32 - type: integer 
 	Parameter C_ADD_LENGTH bound to: 33 - type: integer 
 	Parameter C_DATA_IN_LENGTH bound to: 16 - type: integer 
 	Parameter C_DATA_OUT_LENGTH bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'FIR_FILTER' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:5' bound to instance 'U_FIR_FILTER' of component 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:539]
+INFO: [Synth 8-3491] module 'FIR_FILTER' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:5' bound to instance 'U_FIR_FILTER' of component 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:525]
 	Parameter NUM_OF_TAPS bound to: 4 - type: integer 
 	Parameter C_COEFS_LENGTH bound to: 16 - type: integer 
 	Parameter C_MULT_LENGTH bound to: 32 - type: integer 
 	Parameter C_ADD_LENGTH bound to: 33 - type: integer 
 	Parameter C_DATA_IN_LENGTH bound to: 16 - type: integer 
 	Parameter C_DATA_OUT_LENGTH bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'FIR_FILTER' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:5' bound to instance 'U_FIR_FILTER' of component 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:539]
+INFO: [Synth 8-3491] module 'FIR_FILTER' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:5' bound to instance 'U_FIR_FILTER' of component 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:525]
 	Parameter NUM_OF_TAPS bound to: 4 - type: integer 
 	Parameter C_COEFS_LENGTH bound to: 16 - type: integer 
 	Parameter C_MULT_LENGTH bound to: 32 - type: integer 
 	Parameter C_ADD_LENGTH bound to: 33 - type: integer 
 	Parameter C_DATA_IN_LENGTH bound to: 16 - type: integer 
 	Parameter C_DATA_OUT_LENGTH bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'FIR_FILTER' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:5' bound to instance 'U_FIR_FILTER' of component 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:539]
-INFO: [Synth 8-256] done synthesizing module 'fir_filter_top' (3#1) [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:59]
+INFO: [Synth 8-3491] module 'FIR_FILTER' declared at 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/hdl/fir_filter.vhd:5' bound to instance 'U_FIR_FILTER' of component 'FIR_FILTER' [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:525]
+INFO: [Synth 8-256] done synthesizing module 'fir_filter_top' (3#1) [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd:58]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1211.695 ; gain = 85.375
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1209.285 ; gain = 83.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1211.695 ; gain = 85.375
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1209.285 ; gain = 83.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1211.695 ; gain = 85.375
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1209.285 ; gain = 83.156
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1211.695 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1209.285 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[0].U_FIR_FIFO1'
-Finished Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[0].U_FIR_FIFO1'
-Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[1].U_FIR_FIFO1'
-Finished Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[1].U_FIR_FIFO1'
-Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[2].U_FIR_FIFO1'
-Finished Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[2].U_FIR_FIFO1'
-Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[3].U_FIR_FIFO1'
-Finished Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[3].U_FIR_FIFO1'
-Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[4].U_FIR_FIFO1'
-Finished Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[4].U_FIR_FIFO1'
-Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[5].U_FIR_FIFO1'
-Finished Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[5].U_FIR_FIFO1'
-Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[6].U_FIR_FIFO1'
-Finished Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[6].U_FIR_FIFO1'
-Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[7].U_FIR_FIFO1'
-Finished Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[7].U_FIR_FIFO1'
+Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[0].U_FIR_FIFO1'
+Finished Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[0].U_FIR_FIFO1'
+Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[1].U_FIR_FIFO1'
+Finished Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[1].U_FIR_FIFO1'
+Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[2].U_FIR_FIFO1'
+Finished Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[2].U_FIR_FIFO1'
+Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[3].U_FIR_FIFO1'
+Finished Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[3].U_FIR_FIFO1'
+Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[4].U_FIR_FIFO1'
+Finished Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[4].U_FIR_FIFO1'
+Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[5].U_FIR_FIFO1'
+Finished Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[5].U_FIR_FIFO1'
+Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[6].U_FIR_FIFO1'
+Finished Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[6].U_FIR_FIFO1'
+Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[7].U_FIR_FIFO1'
+Finished Parsing XDC File [c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1/FIR_FIFO1_in_context.xdc] for cell 'G_ADC_FIFO[7].U_FIR_FIFO1'
 Parsing XDC File [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/xdc/fir_filter_timing.xdc]
 Finished Parsing XDC File [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/xdc/fir_filter_timing.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/xdc/fir_filter_timing.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fir_filter_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/fir_filter_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1333.910 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1330.262 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 38 instances were transformed.
   IBUFGDS => IBUFDS: 21 instances
   OBUFDS => OBUFDS: 17 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1333.910 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1330.262 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'G_ADC_FIFO[0].U_FIR_FIFO1' at clock pin 'clk' is different from the actual clock period '4.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'G_ADC_FIFO[1].U_FIR_FIFO1' at clock pin 'clk' is different from the actual clock period '4.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'G_ADC_FIFO[2].U_FIR_FIFO1' at clock pin 'clk' is different from the actual clock period '4.000', this can lead to different synthesis results.
@@ -364,14 +364,14 @@ WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context s
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'G_ADC_FIFO[6].U_FIR_FIFO1' at clock pin 'clk' is different from the actual clock period '4.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'G_ADC_FIFO[7].U_FIR_FIFO1' at clock pin 'clk' is different from the actual clock period '4.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1336.996 ; gain = 210.676
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1333.402 ; gain = 207.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k70tfbg484-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1336.996 ; gain = 210.676
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1333.402 ; gain = 207.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -385,10 +385,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for \G_ADC_FIFO[5].U_FIR_FIFO1 . (con
 Applied set_property KEEP_HIERARCHY = SOFT for \G_ADC_FIFO[6].U_FIR_FIFO1 . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for \G_ADC_FIFO[7].U_FIR_FIFO1 . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1336.996 ; gain = 210.676
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1333.402 ; gain = 207.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1336.996 ; gain = 210.676
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1333.402 ; gain = 207.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -397,17 +397,19 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   34 Bit       Adders := 8     
 	   2 Input   33 Bit       Adders := 16    
-	   2 Input    8 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
 +---Registers : 
 	               34 Bit    Registers := 8     
 	               33 Bit    Registers := 16    
 	               32 Bit    Registers := 32    
 	               16 Bit    Registers := 126   
-	                8 Bit    Registers := 6     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 5     
 	                1 Bit    Registers := 4     
 +---Muxes : 
 	   2 Input   16 Bit        Muxes := 1     
-	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
 	   2 Input    1 Bit        Muxes := 4     
 	   8 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -490,7 +492,7 @@ DSP Report: operator G_FIR_FILTER[0].U_FIR_FILTER/r_mult_reg[1]0 is absorbed int
 DSP Report: Generating DSP G_FIR_FILTER[0].U_FIR_FILTER/r_mult_reg[0]0, operation Mode is: A*B.
 DSP Report: operator G_FIR_FILTER[0].U_FIR_FILTER/r_mult_reg[0]0 is absorbed into DSP G_FIR_FILTER[0].U_FIR_FILTER/r_mult_reg[0]0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1336.996 ; gain = 210.676
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1333.402 ; gain = 207.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -542,19 +544,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1346.754 ; gain = 220.434
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1340.773 ; gain = 214.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1385.082 ; gain = 258.762
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1378.699 ; gain = 252.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1396.934 ; gain = 270.613
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1390.910 ; gain = 264.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -572,37 +574,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1400.273 ; gain = 273.953
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1392.551 ; gain = 266.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1400.273 ; gain = 273.953
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1392.551 ; gain = 266.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1400.273 ; gain = 273.953
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1392.551 ; gain = 266.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1400.273 ; gain = 273.953
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1392.551 ; gain = 266.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1400.273 ; gain = 273.953
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1392.551 ; gain = 266.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1400.273 ; gain = 273.953
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1392.551 ; gain = 266.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -642,31 +644,31 @@ Report Cell Usage:
 |10    |CARRY4         |   216|
 |11    |DSP48E1        |    32|
 |12    |LUT1           |     9|
-|13    |LUT2           |   809|
-|14    |LUT3           |    13|
-|15    |LUT4           |   518|
-|16    |LUT5           |     3|
-|17    |LUT6           |    52|
+|13    |LUT2           |   808|
+|14    |LUT3           |    14|
+|15    |LUT4           |   517|
+|16    |LUT5           |     4|
+|17    |LUT6           |    51|
 |18    |SRL16E         |    80|
-|19    |FDCE           |  1553|
-|20    |FDPE           |    97|
+|19    |FDCE           |  1561|
+|20    |FDPE           |    90|
 |21    |FDRE           |   283|
 |22    |IBUFGDS        |    21|
 |23    |OBUFDS         |    17|
 +------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1400.273 ; gain = 273.953
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1392.551 ; gain = 266.422
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1400.273 ; gain = 148.652
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1400.273 ; gain = 273.953
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1392.551 ; gain = 142.305
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1392.551 ; gain = 266.422
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1400.273 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1392.551 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 286 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1413.250 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1403.555 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 38 instances were transformed.
   IBUFGDS => IBUFDS: 21 instances
@@ -675,7 +677,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 80 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1413.250 ; gain = 286.930
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1403.555 ; gain = 277.426
 INFO: [Common 17-1381] The checkpoint 'C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/synth_3/fir_filter_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file fir_filter_top_utilization_synth.rpt -pb fir_filter_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 24 17:07:34 2021...
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 25 09:38:54 2021...

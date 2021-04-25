@@ -90,9 +90,9 @@ set_property vhdl_version vhdl_2008 [current_fileset]
 set_property generic C_FIRMWARE_REVISION=32'h0420_0000 [current_fileset]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1.xci
-set_property used_in_implementation false [get_files -all c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1_ooc.xdc]
+read_ip -quiet c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1.xci
+set_property used_in_implementation false [get_files -all c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -163,32 +163,32 @@ create_report "FIR_FIFO1_synth_1_synth_report_utilization_0" "report_utilization
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/FIR_FIFO1_synth_1/FIR_FIFO1.dcp c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1.dcp
+  file copy -force C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/FIR_FIFO1_synth_1/FIR_FIFO1.dcp c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1_stub.v
+  write_verilog -force -mode synth_stub c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1_stub.vhdl
+  write_vhdl -force -mode synth_stub c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1_sim_netlist.v
+  write_verilog -force -mode funcsim c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -198,32 +198,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/FIR_FIFO1_synth_1/FIR_FIFO1.dcp c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1.dcp
+  file copy -force C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/FIR_FIFO1_synth_1/FIR_FIFO1.dcp c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/FIR_FIFO1_synth_1/FIR_FIFO1_stub.v c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1_stub.v
+  file rename -force C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/FIR_FIFO1_synth_1/FIR_FIFO1_stub.v c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/FIR_FIFO1_synth_1/FIR_FIFO1_stub.vhdl c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1_stub.vhdl
+  file rename -force C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/FIR_FIFO1_synth_1/FIR_FIFO1_stub.vhdl c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/FIR_FIFO1_synth_1/FIR_FIFO1_sim_netlist.v c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1_sim_netlist.v
+  file rename -force C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/FIR_FIFO1_synth_1/FIR_FIFO1_sim_netlist.v c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/FIR_FIFO1_synth_1/FIR_FIFO1_sim_netlist.vhdl c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1_sim_netlist.vhdl
+  file rename -force C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.runs/FIR_FIFO1_synth_1/FIR_FIFO1_sim_netlist.vhdl c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -232,13 +232,13 @@ if { [catch {
 
 if {[file isdir C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.ip_user_files/ip/FIR_FIFO1]} {
   catch { 
-    file copy -force c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1_stub.v C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.ip_user_files/ip/FIR_FIFO1
+    file copy -force c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1_stub.v C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.ip_user_files/ip/FIR_FIFO1
   }
 }
 
 if {[file isdir C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.ip_user_files/ip/FIR_FIFO1]} {
   catch { 
-    file copy -force c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1_stub.vhdl C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.ip_user_files/ip/FIR_FIFO1
+    file copy -force c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1_stub.vhdl C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/make/pnr/adc_fir.ip_user_files/ip/FIR_FIFO1
   }
 }
 file delete __synthesis_is_running__

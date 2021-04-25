@@ -9,7 +9,7 @@ package fir_filter_pkg is
     CONSTANT ADC_FIFO_SIZE : INTEGER := 9;
     CONSTANT c_NUM_BITS : INTEGER := 16;
     CONSTANT c_SEED_COUNTER_BITS : INTEGER := 16;
-    CONSTANT c_CLK_PERIOD : TIME := 2 ns;
+    CONSTANT adc_CLK_PERIOD : TIME := 0.5 ns;
 
 
     constant C_COEFS_LENGTH : integer := 16;

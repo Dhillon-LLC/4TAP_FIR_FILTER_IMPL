@@ -29,23 +29,31 @@ LIBRARY unisim;
 USE unisim.vcomponents.ALL;
 
 ENTITY FIR_FILTER_TOP_TB IS
-  --  GENERIC (
-  --    SIM_MODE : STRING := "FALSE";
-  --    g_Num_Bits : INTEGER := 16
-  --  );
-  --  PORT (
-  --    --    FPGA_CLK_P : IN STD_LOGIC;
-  --    --    FPGA_CLK_N : IN STD_LOGIC;
-  --    ADC_CLK_P : IN STD_LOGIC;
-  --    ADC_CLK_N : IN STD_LOGIC;
-  --    fir_data_out_IO_P : OUT STD_LOGIC;    -- _VECTOR(g_NUM_Bits-1 DOWNTO 0);
-  --    fir_data_out_IO_N : OUT STD_LOGIC    -- _VECTOR(g_NUM_Bits-1 DOWNTO 0)
+  -- GENERIC (
+  --   C_FIRMWARE_REVISION : STD_LOGIC_VECTOR(31 DOWNTO 0):= x"0424_0000";
+  --   SIM_MODE : STRING := "FALSE";
+  --   g_Num_Bits : INTEGER := 16
+  -- );
+  -- --  PORT (
+  --   FPGA_CLK_P : IN STD_LOGIC;
+  --   FPGA_CLK_N : IN STD_LOGIC;
+  --   ADC_CLK_P : IN STD_LOGIC;
+  --   ADC_CLK_N : IN STD_LOGIC;
+  --   ADC_DATA_P : IN STD_LOGIC_VECTOR(g_NUM_Bits - 1 DOWNTO 0);
+  --   ADC_DATA_N : IN STD_LOGIC_VECTOR(g_NUM_Bits - 1 DOWNTO 0);
 
-  --    --    DAC_CLK_P : IN STD_LOGIC;
-  --    --    DAC_CLK_N : IN STD_LOGIC
-  --  );
+  --   Valid_in_P : IN STD_LOGIC;
+  --   Valid_in_N : IN STD_LOGIC;
+  --   DAC_CLK_P : IN STD_LOGIC;
+  --   DAC_CLK_N : IN STD_LOGIC;
+  --   DAC_DATA_P : OUT STD_LOGIC_VECTOR(g_NUM_Bits - 1 DOWNTO 0);
+  --   DAC_DATA_N : OUT STD_LOGIC_VECTOR(g_NUM_Bits - 1 DOWNTO 0);
+  --   DAC_VALID_OUT_P : OUT STD_LOGIC;
+  --   DAC_VALID_OUT_N : OUT STD_LOGIC;
+  --   RESET_P : IN STD_LOGIC;
+  --   RESET_N : IN STD_LOGIC
+  -- );
 END ENTITY FIR_FILTER_TOP_TB;
-
 ARCHITECTURE behave OF FIR_FILTER_TOP_TB IS
   COMPONENT FIR_FIFO1
     PORT (
@@ -57,7 +65,7 @@ ARCHITECTURE behave OF FIR_FILTER_TOP_TB IS
       dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
       full : OUT STD_LOGIC;
       empty : OUT STD_LOGIC;
-      data_count : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
+      data_count : OUT STD_LOGIC_VECTOR(ADC_FIFO_SIZE - 1 DOWNTO 0)
     );
   END COMPONENT;
 
@@ -111,7 +119,7 @@ ARCHITECTURE behave OF FIR_FILTER_TOP_TB IS
   --reset 
   SIGNAL RST_N : STD_LOGIC := '0';
   SIGNAL reset_counter : STD_LOGIC_VECTOR(11 DOWNTO 0) := (OTHERS => '0');
-  SIGNAL d_valid_counter : STD_LOGIC_VECTOR(IN_STREAM_DIVIDER - 1 DOWNTO 0) := (OTHERS => '1');
+  SIGNAL d_valid_counter : STD_LOGIC_VECTOR(IN_STREAM_DIVIDER DOWNTO 0) := (OTHERS => '1');
   SIGNAL d_valid_counter_en : STD_LOGIC;
 
   SIGNAL d_read_counter : STD_LOGIC_VECTOR(1 DOWNTO 0) := (OTHERS => '1');
@@ -168,14 +176,50 @@ ARCHITECTURE behave OF FIR_FILTER_TOP_TB IS
   SIGNAL s_fir_data_in, s_fir_data_out : STD_LOGIC_VECTOR(IN_STREAM_DIVIDER - 1 DOWNTO 0);
 BEGIN
   i_Seed_Data <= x"DEAD";
-  -- DAC_DATA_IN <= FIR_FILTER_OUT;
-  --  G_DIFF_OBUG : FOR I IN 0 TO 0 GENERATE
-  --  DIFF_OBUF : OBUFDS PORT MAP (
-  --    I => DAC_DATA_IN(I),
-  --    O => fir_data_out_IO_P,
-  --    OB => fir_data_out_IO_N    
-  --  );
-  --  END GENERATE G_DIFF_OBUG;
+
+  -- G_DIFF_OBUF : FOR I IN 0 TO 15 GENERATE
+  --   DIFF_OBUF : OBUFDS PORT MAP(
+  --     I => DAC_DATA_IN(I),
+  --     O => DAC_DATA_P(I),
+  --     OB => DAC_DATA_N(I)
+  --   );
+  -- END GENERATE G_DIFF_OBUF;
+
+  -- G_SNGL_IBUG : FOR I IN 0 TO 15 GENERATE
+  --   SNGL_IBUF : IBUFGDS PORT MAP(
+  --     O => fir_data_in(I),
+  --     I => ADC_DATA_P(I),
+  --     IB => ADC_DATA_N(I)
+  --   );
+  -- END GENERATE G_SNGL_IBUG;
+
+  -- dac_valid_ibuf : OBUFDS PORT MAP(
+  --   I => DAC_VALID_OUT,
+  --   O => DAC_VALID_OUT_P,
+  --   OB => DAC_VALID_OUT_N
+  -- );
+
+  -- RST_ibuf : IBUFGDS
+  -- GENERIC MAP(
+  --   DIFF_TERM => FALSE,
+  --   IBUF_LOW_PWR => FALSE)
+
+  -- PORT MAP(
+  --   O => RST,
+  --   I => RESET_P,
+  --   IB => RESET_N
+  -- );
+  -- RST_N <= RST;
+  -- adc_valid_ibuf : IBUFGDS
+  -- GENERIC MAP(
+  --   DIFF_TERM => FALSE,
+  --   IBUF_LOW_PWR => FALSE)
+
+  -- PORT MAP(
+  --   O => Valid_in,
+  --   I => Valid_in_P,
+  --   IB => Valid_in_N
+  -- );
   -- GENERATE SINGLE ENDED ADC CLK FROM DIFFERENTIAL INPUT
 
   adc_ibuf : IBUFGDS
@@ -209,11 +253,11 @@ BEGIN
     I => INT_FPGA_CLK_P,
     IB => INT_FPGA_CLK_N
   );
-  INT_FPGA_CLK_P <= NOT INT_FPGA_CLK_P AFTER c_CLK_PERIOD/2;
+  INT_FPGA_CLK_P <= NOT INT_FPGA_CLK_P AFTER (adc_CLK_PERIOD * IN_STREAM_DIVIDER)/2;
   INT_FPGA_CLK_N <= NOT INT_FPGA_CLK_P;
-  INT_ADC_CLK_P <= NOT INT_ADC_CLK_P AFTER c_CLK_PERIOD/(IN_STREAM_DIVIDER * 2);
+  INT_ADC_CLK_P <= NOT INT_ADC_CLK_P AFTER adc_CLK_PERIOD/2;
   INT_ADC_CLK_N <= NOT INT_ADC_CLK_P;
-  INT_DAC_CLK_P <= NOT INT_DAC_CLK_P AFTER c_CLK_PERIOD/(IN_STREAM_DIVIDER * 2);
+  INT_DAC_CLK_P <= NOT INT_DAC_CLK_P AFTER adc_CLK_PERIOD/2;
   INT_DAC_CLK_N <= NOT INT_DAC_CLK_P;
 
   G_ADC_FIFO : FOR I IN 0 TO IN_STREAM_DIVIDER - 1 GENERATE
@@ -236,7 +280,7 @@ BEGIN
   BEGIN
     IF (RST_N = '0') THEN
       Valid_in <= '0';
-      Valid_toggle <= '1';
+      Valid_toggle <= '0';
       Valid_in_cnt <= (OTHERS => '0');
       Valid_toggle_cnt <= (OTHERS => '1');
     ELSIF rising_edge(adc_clk) THEN
@@ -293,7 +337,7 @@ BEGIN
   BEGIN
     IF (RST_N = '0') THEN
       d_valid_counter_en <= '0';
-      d_valid_counter <= (OTHERS => '1');
+      d_valid_counter <= x"00" & b"1";
       s_adc_data_Valid <= (OTHERS => '0');
     ELSIF rising_edge(adc_clk) THEN
 
@@ -327,15 +371,15 @@ BEGIN
       IF (d_strb_1Q(7) = '1') THEN
         d_trig_strb_Q <= '1';
         d_valid_counter_en <= '1';
-      ELSIF (d_valid_counter = 0) THEN
+      ELSIF (d_valid_counter(IN_STREAM_DIVIDER) = '1') THEN
         d_trig_strb_Q <= '0';
         d_valid_counter_en <= '0';
       END IF;
 
       IF (d_valid_counter_en = '0') THEN
-        d_valid_counter <= (OTHERS => '1');
-      ELSIF (d_valid_counter_en <= '1') THEN
-        d_valid_counter <= d_valid_counter - b"1";
+        d_valid_counter <= x"00" & b"1";
+      ELSE
+        d_valid_counter <= d_valid_counter + b"1";
       END IF;
 
       -- direct incoming adc data into four different register for parallelism to save and process it at slower clock rate
@@ -458,7 +502,7 @@ BEGIN
     IF (RST_N = '0') THEN
       adc_fifo_rd_en <= (OTHERS => '0');
       d_read_counter <= (OTHERS => '1');
-      d_read_counter_en <= '0';
+
       FIR_FILTER_IN <= (OTHERS => (OTHERS => '0'));
     ELSIF rising_edge(FPGA_CLK) THEN
       --default values 
@@ -472,25 +516,13 @@ BEGIN
       FIR_FILTER_IN(5) <= adc_fifo_dout(5);
       FIR_FILTER_IN(6) <= adc_fifo_dout(6);
       FIR_FILTER_IN(7) <= adc_fifo_dout(7);
-      d_read_counter_en <= '0';
 
       fifo_data_valid <= NOT (adc_fifo_empty(0) OR adc_fifo_empty(1) OR adc_fifo_empty(2) OR adc_fifo_empty(3));
       adc_fifo_empty_Q <= adc_fifo_empty;
-      -- GENERATE rd STRB FOR FIR FIFO
-      --      IF (d_read_counter = 0) THEN
-      --        adc_fifo_rd_en <= (OTHERS => '1') ;
-      --      ELSIF (fifo_data_valid = '1') THEN
-      --        d_read_counter_en <= '1';
-      --      END IF;
+
       IF (fifo_data_valid = '1') THEN
         adc_fifo_rd_en <= (OTHERS => '1');
       END IF;
-      --      IF (d_read_counter = 0) THEN
-      --        d_read_counter <= (OTHERS => '1');
-      --      ELSIF (d_read_counter_en = '1') THEN
-      --        d_read_counter <= d_read_counter - b"1";
-      --      END IF;
-
     END IF;
   END PROCESS p_fetch_fifo;
 
@@ -505,7 +537,7 @@ BEGIN
         s_fir_data_out <= s_fir_data_out(IN_STREAM_DIVIDER - 2 DOWNTO 0) & b"0";
       END IF;
 
-      IF (adc_fifo_empty_Q(0) = '0') THEN
+      IF (adc_fifo_empty_Q(0) = '0') THEN     
         IF (s_fir_data_out(0) = '1') THEN
           DAC_DATA_IN <= FIR_FILTER_OUT(0);
         END IF;

@@ -54,7 +54,6 @@ ENTITY fir_filter_top IS
     RESET_P : IN STD_LOGIC;
     RESET_N : IN STD_LOGIC
   );
-
 END ENTITY fir_filter_top;
 ARCHITECTURE behave OF fir_filter_top IS
   COMPONENT FIR_FIFO1
@@ -66,11 +65,11 @@ ARCHITECTURE behave OF fir_filter_top IS
       rd_en : IN STD_LOGIC;
       dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
       full : OUT STD_LOGIC;
---      almost_full : OUT STD_LOGIC;
       empty : OUT STD_LOGIC;
       data_count : OUT STD_LOGIC_VECTOR(ADC_FIFO_SIZE - 1 DOWNTO 0)
     );
   END COMPONENT;
+
   COMPONENT FIR_FILTER IS
     GENERIC (
       NUM_OF_TAPS : INTEGER := 4;
@@ -123,7 +122,7 @@ ARCHITECTURE behave OF fir_filter_top IS
   --reset 
   SIGNAL RST_N, RST : STD_LOGIC := '0';
   SIGNAL reset_counter : STD_LOGIC_VECTOR(11 DOWNTO 0) := (OTHERS => '0');
-  SIGNAL d_valid_counter : STD_LOGIC_VECTOR(IN_STREAM_DIVIDER - 1 DOWNTO 0) := (OTHERS => '1');
+  SIGNAL d_valid_counter : STD_LOGIC_VECTOR(IN_STREAM_DIVIDER DOWNTO 0) := (OTHERS => '1');
   SIGNAL d_valid_counter_en : STD_LOGIC;
 
   SIGNAL d_read_counter : STD_LOGIC_VECTOR(1 DOWNTO 0) := (OTHERS => '1');
@@ -168,7 +167,7 @@ ARCHITECTURE behave OF fir_filter_top IS
   SIGNAL s_fir_data_in, s_fir_data_out : STD_LOGIC_VECTOR(IN_STREAM_DIVIDER-1 DOWNTO 0);
 BEGIN
   i_Seed_Data <= x"DEAD";
-  -- DAC_DATA_IN <= FIR_DATA_o;
+
   G_DIFF_OBUF : FOR I IN 0 TO 15 GENERATE
     DIFF_OBUF : OBUFDS PORT MAP(
       I => DAC_DATA_IN(I),
@@ -219,7 +218,6 @@ BEGIN
   GENERIC MAP(
     DIFF_TERM => FALSE,
     IBUF_LOW_PWR => FALSE)
-
   PORT MAP(
     O => adc_clk,
     I => ADC_CLK_P,
@@ -286,7 +284,7 @@ BEGIN
   BEGIN
     IF (RST_N = '0') THEN
       d_valid_counter_en <= '0';
-      d_valid_counter <= (OTHERS => '1');
+      d_valid_counter <= x"00" & b"1";
       s_adc_data_Valid <= (OTHERS => '0');
     ELSIF rising_edge(adc_clk) THEN
 
@@ -320,15 +318,15 @@ BEGIN
       IF (d_strb_1Q(7) = '1') THEN
         d_trig_strb_Q <= '1';
         d_valid_counter_en <= '1';
-      ELSIF (d_valid_counter = 0) THEN
+      ELSIF (d_valid_counter(IN_STREAM_DIVIDER) = '1') THEN
         d_trig_strb_Q <= '0';
         d_valid_counter_en <= '0';
       END IF;
 
       IF (d_valid_counter_en = '0') THEN
-        d_valid_counter <= (OTHERS => '1');
-      ELSIF (d_valid_counter_en <= '1') THEN
-        d_valid_counter <= d_valid_counter - b"1";
+        d_valid_counter <= x"00" & b"1";
+      ELSE
+        d_valid_counter <= d_valid_counter + b"1";
       END IF;
 
       -- direct incoming adc data into four different register for parallelism to save and process it at slower clock rate
@@ -411,11 +409,11 @@ BEGIN
   p_load_adc_fifo : PROCESS (FPGA_CLK, RST_N)
   BEGIN
     IF (RST_N = '0') THEN
-      adc_fifo_din   <= (OTHERS => x"DEAD") ;
-      adc_fifo_wr_en <= (OTHERS => '0') ;
+      adc_fifo_din <= (OTHERS => x"DEAD");
+      adc_fifo_wr_en <= (OTHERS => '0');
     ELSIF rising_edge(FPGA_CLK) THEN
       --default values 
-      adc_fifo_wr_en <= (OTHERS => '0') ;
+      adc_fifo_wr_en <= (OTHERS => '0');
 
       -- GENERATE WR STRB FOR FIR FIFO
       IF (d_trig_strb_Q = '1') THEN
@@ -451,7 +449,7 @@ BEGIN
     IF (RST_N = '0') THEN
       adc_fifo_rd_en <= (OTHERS => '0');
       d_read_counter <= (OTHERS => '1');
-      d_read_counter_en <= '0';
+
       FIR_FILTER_IN <= (OTHERS => (OTHERS => '0'));
     ELSIF rising_edge(FPGA_CLK) THEN
       --default values 
@@ -465,25 +463,13 @@ BEGIN
       FIR_FILTER_IN(5) <= adc_fifo_dout(5);
       FIR_FILTER_IN(6) <= adc_fifo_dout(6);
       FIR_FILTER_IN(7) <= adc_fifo_dout(7);
-      d_read_counter_en <= '0';
 
       fifo_data_valid <= NOT (adc_fifo_empty(0) OR adc_fifo_empty(1) OR adc_fifo_empty(2) OR adc_fifo_empty(3));
       adc_fifo_empty_Q <= adc_fifo_empty;
-      -- GENERATE rd STRB FOR FIR FIFO
-      --      IF (d_read_counter = 0) THEN
-      --        adc_fifo_rd_en <= (OTHERS => '1') ;
-      --      ELSIF (fifo_data_valid = '1') THEN
-      --        d_read_counter_en <= '1';
-      --      END IF;
+
       IF (fifo_data_valid = '1') THEN
         adc_fifo_rd_en <= (OTHERS => '1');
       END IF;
-      --      IF (d_read_counter = 0) THEN
-      --        d_read_counter <= (OTHERS => '1');
-      --      ELSIF (d_read_counter_en = '1') THEN
-      --        d_read_counter <= d_read_counter - b"1";
-      --      END IF;
-
     END IF;
   END PROCESS p_fetch_fifo;
 
@@ -498,7 +484,7 @@ BEGIN
         s_fir_data_out <= s_fir_data_out(IN_STREAM_DIVIDER - 2 DOWNTO 0) & b"0";
       END IF;
 
-      IF (adc_fifo_empty_Q(0) = '0') THEN
+      IF (adc_fifo_empty_Q(0) = '0') THEN     
         IF (s_fir_data_out(0) = '1') THEN
           DAC_DATA_IN <= FIR_FILTER_OUT(0);
         END IF;

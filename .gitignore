@@ -84,3 +84,8 @@
 !*.elf
 !*.bmm
 !*.xmp
+ make/pnr/adc_fir.ip_user_files/
+make/pnr/adc_fir.runs/impl_4/.Xil/
+make/pnr/adc_fir.sim/
+modules/ip/FIR_FIFO1/
+make/pnr/adc_fir.ip_user_files/

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sat Apr 24 17:08:27 2021
+| Date         : Sun Apr 25 09:39:46 2021
 | Host         : Gaming-PC-2021 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file fir_filter_top_control_sets_placed.rpt
 | Design       : fir_filter_top
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    40 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    19 |
+| Unused register locations in slices containing registers |    26 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              99 |           30 |
-| No           | No                    | Yes                    |            1514 |          374 |
+| No           | No                    | No                     |              99 |           33 |
+| No           | No                    | Yes                    |            1515 |          370 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |             664 |          132 |
-| Yes          | No                    | Yes                    |             136 |           28 |
+| Yes          | No                    | Yes                    |             136 |           31 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -75,44 +75,44 @@ Table of Contents
 +----------------+------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------+------------------+----------------+--------------+
 |  ADC_CLK_BUFG  |                                                                                                                                                |                                    |                1 |              1 |         1.00 |
 |  DAC_CLK_BUFG  | s_fir_data_out[7]_i_1_n_0                                                                                                                      | G_FIR_FILTER[0].U_FIR_FILTER/clear |                5 |              8 |         1.60 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[5].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                                         |                                    |                3 |             16 |         5.33 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[4].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                                         |                                    |                4 |             16 |         4.00 |
-|  ADC_CLK_BUFG  | d_1Q_reg[1]0                                                                                                                                   |                                    |                2 |             16 |         8.00 |
-|  ADC_CLK_BUFG  | d_1Q_reg[7]0                                                                                                                                   |                                    |                3 |             16 |         5.33 |
-|  ADC_CLK_BUFG  | d_1Q_reg[6]0                                                                                                                                   |                                    |                2 |             16 |         8.00 |
-|  ADC_CLK_BUFG  | d_1Q_reg[2]0                                                                                                                                   |                                    |                4 |             16 |         4.00 |
-|  ADC_CLK_BUFG  | d_1Q_reg[5]0                                                                                                                                   |                                    |                2 |             16 |         8.00 |
-|  ADC_CLK_BUFG  | d_1Q_reg[0]0                                                                                                                                   |                                    |                3 |             16 |         5.33 |
+|  DAC_CLK_BUFG  | DAC_DATA_IN0                                                                                                                                   |                                    |                5 |             16 |         3.20 |
+|  ADC_CLK_BUFG  | d_1Q_reg[6]0                                                                                                                                   |                                    |                3 |             16 |         5.33 |
 |  ADC_CLK_BUFG  | d_1Q_reg[4]0                                                                                                                                   |                                    |                3 |             16 |         5.33 |
-|  ADC_CLK_BUFG  | d_1Q_reg[3]0                                                                                                                                   |                                    |                2 |             16 |         8.00 |
-|  DAC_CLK_BUFG  | DAC_DATA_IN0                                                                                                                                   |                                    |                6 |             16 |         2.67 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[5].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]_0[0] |                                    |                2 |             16 |         8.00 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[5].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]_0[0] |                                    |                5 |             16 |         3.20 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[4].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]_0[0] |                                    |                2 |             16 |         8.00 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[4].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]_0[0] |                                    |                3 |             16 |         5.33 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[1].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                                         |                                    |                6 |             16 |         2.67 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[1].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]_0[0] |                                    |                3 |             16 |         5.33 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[1].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]_0[0] |                                    |                4 |             16 |         4.00 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[3].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]_0[0] |                                    |                3 |             16 |         5.33 |
 |  FPGA_CLK_BUFG | G_ADC_FIFO[3].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]_0[0] |                                    |                3 |             16 |         5.33 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[3].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]_0[0] |                                    |                4 |             16 |         4.00 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[3].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                                         |                                    |                3 |             16 |         5.33 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[7].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]_0[0] |                                    |                2 |             16 |         8.00 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[7].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]_0[0] |                                    |                4 |             16 |         4.00 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[7].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                                         |                                    |                5 |             16 |         3.20 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[6].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]_0[0] |                                    |                5 |             16 |         3.20 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[2].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]_0[0] |                                    |                2 |             16 |         8.00 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[2].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]_0[0] |                                    |                4 |             16 |         4.00 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[2].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                                         |                                    |                4 |             16 |         4.00 |
 |  FPGA_CLK_BUFG | G_ADC_FIFO[6].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]_0[0] |                                    |                4 |             16 |         4.00 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[6].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                                         |                                    |                3 |             16 |         5.33 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[1].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]_0[0] |                                    |                5 |             16 |         3.20 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[1].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]_0[0] |                                    |                2 |             16 |         8.00 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[1].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                                         |                                    |                4 |             16 |         4.00 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[2].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]_0[0] |                                    |                3 |             16 |         5.33 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[2].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]_0[0] |                                    |                3 |             16 |         5.33 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[2].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                                         |                                    |                3 |             16 |         5.33 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[6].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]_0[0] |                                    |                2 |             16 |         8.00 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[6].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                                         |                                    |                4 |             16 |         4.00 |
 |  FPGA_CLK_BUFG | G_ADC_FIFO[0].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]_0[0] |                                    |                2 |             16 |         8.00 |
 |  FPGA_CLK_BUFG | G_ADC_FIFO[0].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]_0[0] |                                    |                4 |             16 |         4.00 |
-|  FPGA_CLK_BUFG | G_ADC_FIFO[0].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                                         |                                    |                4 |             16 |         4.00 |
-|  ADC_CLK_BUFG  |                                                                                                                                                | G_FIR_FILTER[0].U_FIR_FILTER/clear |                9 |             24 |         2.67 |
-|  FPGA_CLK_BUFG |                                                                                                                                                |                                    |               29 |             98 |         3.38 |
-|  FPGA_CLK_BUFG | d_trig_strb_Q__0                                                                                                                               | G_FIR_FILTER[0].U_FIR_FILTER/clear |               23 |            128 |         5.57 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[0].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                                         |                                    |                3 |             16 |         5.33 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[4].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                                         |                                    |                3 |             16 |         5.33 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[5].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]_0[0] |                                    |                4 |             16 |         4.00 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[5].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]_0[0] |                                    |                4 |             16 |         4.00 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[5].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                                         |                                    |                3 |             16 |         5.33 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[4].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]_0[0] |                                    |                4 |             16 |         4.00 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[4].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]_0[0] |                                    |                3 |             16 |         5.33 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[3].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                                         |                                    |                3 |             16 |         5.33 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[7].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]_0[0] |                                    |                3 |             16 |         5.33 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[7].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]_0[0] |                                    |                4 |             16 |         4.00 |
+|  FPGA_CLK_BUFG | G_ADC_FIFO[7].U_FIR_FIFO1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                                         |                                    |                3 |             16 |         5.33 |
+|  ADC_CLK_BUFG  | d_1Q_reg[0]0                                                                                                                                   |                                    |                2 |             16 |         8.00 |
+|  ADC_CLK_BUFG  | d_1Q_reg[1]0                                                                                                                                   |                                    |                3 |             16 |         5.33 |
+|  ADC_CLK_BUFG  | d_1Q_reg[2]0                                                                                                                                   |                                    |                2 |             16 |         8.00 |
+|  ADC_CLK_BUFG  | d_1Q_reg[7]0                                                                                                                                   |                                    |                2 |             16 |         8.00 |
+|  ADC_CLK_BUFG  | d_1Q_reg[5]0                                                                                                                                   |                                    |                4 |             16 |         4.00 |
+|  ADC_CLK_BUFG  | d_1Q_reg[3]0                                                                                                                                   |                                    |                3 |             16 |         5.33 |
+|  ADC_CLK_BUFG  |                                                                                                                                                | G_FIR_FILTER[0].U_FIR_FILTER/clear |               10 |             25 |         2.50 |
+|  FPGA_CLK_BUFG |                                                                                                                                                |                                    |               32 |             98 |         3.06 |
+|  FPGA_CLK_BUFG | d_trig_strb_Q__0                                                                                                                               | G_FIR_FILTER[0].U_FIR_FILTER/clear |               26 |            128 |         4.92 |
 |  ADC_CLK_BUFG  | RST                                                                                                                                            |                                    |               23 |            216 |         9.39 |
-|  FPGA_CLK_BUFG |                                                                                                                                                | G_FIR_FILTER[0].U_FIR_FILTER/clear |              365 |           1490 |         4.08 |
+|  FPGA_CLK_BUFG |                                                                                                                                                | G_FIR_FILTER[0].U_FIR_FILTER/clear |              360 |           1490 |         4.14 |
 +----------------+------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------+------------------+----------------+--------------+
 
 

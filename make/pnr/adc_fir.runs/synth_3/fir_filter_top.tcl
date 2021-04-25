@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_3" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 5
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7k70tfbg484-3
 
@@ -95,9 +96,9 @@ read_vhdl -library xil_defaultlib {
   C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top.vhd
   C:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/src/fir_filter_top_TB.vhd
 }
-read_ip -quiet c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1.xci
-set_property used_in_implementation false [get_files -all c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1_2/FIR_FIFO1_ooc.xdc]
+read_ip -quiet c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1.xci
+set_property used_in_implementation false [get_files -all c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/surin/Documents/project/4TAP_FIR_FILTER_IMPL/modules/ip/FIR_FIFO1/FIR_FIFO1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

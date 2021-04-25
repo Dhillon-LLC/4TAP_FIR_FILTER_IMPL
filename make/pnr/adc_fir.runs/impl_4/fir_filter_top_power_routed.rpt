@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Sat Apr 24 17:08:47 2021
+| Date             : Sun Apr 25 09:41:02 2021
 | Host             : Gaming-PC-2021 running 64-bit major release  (build 9200)
 | Command          : report_power -file fir_filter_top_power_routed.rpt -pb fir_filter_top_power_summary_routed.pb -rpx fir_filter_top_power_routed.rpx
 | Design           : fir_filter_top
@@ -52,14 +52,14 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.069 |        5 |       --- |             --- |
-| Slice Logic             |     0.030 |     4588 |       --- |             --- |
-|   LUT as Logic          |     0.022 |     1177 |     41000 |            2.87 |
+| Clocks                  |     0.070 |        5 |       --- |             --- |
+| Slice Logic             |     0.029 |     4583 |       --- |             --- |
+|   LUT as Logic          |     0.022 |     1173 |     41000 |            2.86 |
 |   CARRY4                |     0.003 |      216 |     10250 |            2.11 |
-|   Register              |     0.003 |     2417 |     82000 |            2.95 |
+|   Register              |     0.003 |     2416 |     82000 |            2.95 |
 |   LUT as Shift Register |    <0.001 |       40 |     13400 |            0.30 |
 |   Others                |     0.000 |       90 |       --- |             --- |
-| Signals                 |     0.039 |     4022 |       --- |             --- |
+| Signals                 |     0.038 |     4017 |       --- |             --- |
 | Block RAM               |     0.005 |        4 |       135 |            2.96 |
 | DSPs                    |     0.068 |       32 |       240 |           13.33 |
 | I/O                     |     0.358 |       76 |       285 |           26.67 |
